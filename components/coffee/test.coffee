@@ -1,1 +1,5 @@
-a = 1;
+$ = require 'jquery'
+
+
+# Test
+a = 1
