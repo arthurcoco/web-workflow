@@ -39,8 +39,11 @@ if (env === 'development'){
 coffeeSources = ['components/coffee/*.coffee'];
 
 jsSources = [
-	'components/scripts/test.js',
-	'components/scripts/myscript.js'
+	'components/scripts/js.imports.js',
+	'components/scripts/jquery.easings.min.js',
+	'components/scripts/jquery.slimscroll.js',
+	'components/scripts/jquery.fullPage.js',
+	'components/scripts/script.js'
 ];
 
 sassSources = [
@@ -78,18 +81,20 @@ gulp.task('js', function(){
 		.pipe(connect.reload())
 });
 
-gulp.task('compass', function(){
-	gulp.src(sassSources)
-		.pipe(compass({
-			sass: 'components/sass',
-			image: outputDir +'images',
-			style: sassStyle,
-			require: 'bootstrap-sass'
-		})
-			.on('error', gutil.log))
-		.pipe(gulp.dest(outputDir + 'css'))
-		.pipe(connect.reload())
+
+gulp.task('compass', function() {
+  gulp.src(sassSources)
+    .pipe(compass({
+      sass: 'components/sass',
+      image: outputDir + 'images',
+      style: sassStyle,
+      require: ['font-awesome-sass', 'bootstrap-sass']
+    })
+    .on('error', gutil.log))
+    .pipe(gulp.dest(outputDir + 'css'))
+    .pipe(connect.reload())
 });
+
 
 
 
