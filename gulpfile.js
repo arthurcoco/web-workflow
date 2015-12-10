@@ -4,19 +4,55 @@ var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var browserify = require('gulp-browserify');
 var compass = require('gulp-compass');
+var connect = require('gulp-connect');
+var gulpif = require('gulp-if');
+var uglify = require('gulp-uglify');
+
+
+var env,
+	coffeeSources,
+	jsSources,
+	sassSources,
+	htmlSources,
+	jsonSources,
+	outputDir,
+	sassStyle;
+
+// env = process.env.NODE_ENV || 'development';
+
+env = 'production'
+
+if (env === 'development'){
+	outputDir = 'builds/development/';
+	sassStyle = "expanded";
+}else{
+	outputDir = 'builds/production/';
+	sassStyle = "compressed";
+}
 
 
 // SRCS
-var coffeeSources = ['components/coffee/*.coffee'];
+coffeeSources = ['components/coffee/*.coffee'];
 
-var jsSources = [
+jsSources = [
 	'components/scripts/test.js',
 	'components/scripts/myscript.js'
 ];
 
-var sassSources = [
+sassSources = [
 	'components/sass/style.scss'
 ];
+
+htmlSources = [
+	outputDir + '*.html'
+];
+
+jsonSources = [
+	outputDir + 'json/*.json'
+];
+
+
+// =============
 
 gulp.task('log',function(){
 	gutil.log('Work!');
@@ -29,24 +65,63 @@ gulp.task('coffee', function(){
 		.pipe(gulp.dest('components/scripts'))
 });
 
-gulp.task('js', ['coffee'], function(){
+gulp.task('js', function(){
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
 		.pipe(browserify())
-		.pipe(gulp.dest('builds/development/js'))
+		.pipe(gulpif(env === 'production', uglify()))
+		.pipe(gulp.dest(outputDir + 'js'))
+		.pipe(connect.reload())
 });
 
 gulp.task('compass', function(){
 	gulp.src(sassSources)
 		.pipe(compass({
 			sass: 'components/sass',
-			image: 'builds/development/images',
-			style: 'expanded',
+			image: outputDir +'images',
+			style: sassStyle,
 			require: 'bootstrap-sass'
 		})
 			.on('error', gutil.log))
-		.pipe(gulp.dest('builds/development/css'))
+		.pipe(gulp.dest(outputDir + 'css'))
+		.pipe(connect.reload())
 });
 
 
-gulp.task('default', ['coffee', 'js', 'compass']);
+
+gulp.task('html', function(){
+	gulp.src(htmlSources)
+		.pipe(connect.reload())
+});
+
+
+gulp.task('json', function(){
+	gulp.src(jsonSources)
+		.pipe(connect.reload())
+});
+
+
+
+// Watch
+gulp.task('watch', function(){
+	gulp.watch(coffeeSources, ['coffee']);
+	gulp.watch(jsSources, ['js']);
+	gulp.watch('components/sass/*.scss', ['compass']);
+	gulp.watch(htmlSources, ['html']);
+});
+
+
+// connect
+gulp.task('connect', function(){
+	connect.server({
+		root: outputDir,
+		livereload: true
+	});
+});
+
+
+// Default Task
+
+gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'connect', 'watch' ]);
+
+
