@@ -1,0 +1,28 @@
+{
+  "name": "web-workflow",
+  "version": "1.0.0",
+  "description": "Web Workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurcoco/web-workflow.git"
+  },
+  "author": "Arthur Shen",
+  "bugs": {
+    "url": "https://github.com/arthurcoco/web-workflow/issues"
+  },
+  "homepage": "https://github.com/arthurcoco/web-workflow#readme",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0",
+    "gulp-beautify": "^2.0.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-util": "^3.0.7"
+  }
+}
