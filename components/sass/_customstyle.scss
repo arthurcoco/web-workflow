@@ -1,9 +1,142 @@
-.section{
-	background-color: gray;
+header {
+    .logo {
+        width: $logo_width;
+    }
+    .navbar-default {
+        padding-top: 10px;
+        background-color: transparent;
+        border: none;
+    }
+    .navbar-nav li a {
+        padding: 15px 15px;
+    }
+    h3 {
+        color: white;
+        margin-top: 0px;
+    }
+}
+
+#featured .item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+#fullpage .section .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+header .logo {
+    width: 70px;
+}
+
+header .navbar-default {
+    padding-top: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+header .navbar-nav li a {
+    padding: 15px 15px;
+}
+
+header h3 {
+    color: white;
+    margin-top: 0px;
+}
+
+#featured .item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
 }
 
 
-header .navbar-default{
-	background-color: transparent;
-	border: none;
+// .carousel-inner .item {
+//     -webkit-transition: 15s ease-in-out left;
+//     -moz-transition: 15s ease-in-out left;
+//     -o-transition: 15s ease-in-out left;
+//     transition: 15s ease-in-out left;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fullpage .section .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Centered texts in each section
+	* --------------------------------------- */
+
+.section {
+    text-align: center;
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    /* in case the video doesn't fit the whole page*/
+    background-image: /* our video */;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    /*cover video background */
+    z-index: 3;
+
+    width: 1302px;
+    height: 585px;
+}
+
+
+/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+
+#section0 .layer {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 43%;
+}
+
+
+/*solves problem with overflowing video in Mac with Chrome */
+
+#section0 {
+    overflow: hidden;
 }

@@ -39,9 +39,8 @@ if (env === 'development'){
 coffeeSources = ['components/coffee/*.coffee'];
 
 jsSources = [
-	'components/scripts/js.imports.js',
 	'components/scripts/jquery.easings.min.js',
-	'components/scripts/jquery.slimscroll.js',
+	'components/scripts/jquery.slimscroll.min.js',
 	'components/scripts/jquery.fullPage.js',
 	'components/scripts/script.js'
 ];

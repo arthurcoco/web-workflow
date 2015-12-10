@@ -1,18 +1,14 @@
 // Style.scss
 // =====
 
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+
 
 // Compass imports
 @import "compass";
 @import "compass/css3/box-shadow";
 
-// Bootstrap
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
-
-@import "jquery.fullPage.scss";
-
+@import "variable";
 @import "customstyle";
