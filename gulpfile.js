@@ -9,7 +9,8 @@ var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
 var minifyHTML= require('gulp-minify-html');
 var minifyJSON= require('gulp-jsonminify');
-
+var imagemin = require('gulp-imagemin')
+var pngcrush = require('imagemin-pngcrush')
 
 var env,
 	coffeeSources,
@@ -20,9 +21,10 @@ var env,
 	outputDir,
 	sassStyle;
 
-// env = process.env.NODE_ENV || 'development';
+env = process.env.NODE_ENV || 'development';
 
-env = 'production';
+// env = 'production';
+// env = 'development';
 
 if (env === 'development'){
 	outputDir = 'builds/development/';
@@ -107,6 +109,23 @@ gulp.task('json', function(){
 });
 
 
+gulp.task('images', function(){
+	// any images in any sub-folders
+	gulp.src('builds/development/images/**/*.*') 
+		.pipe(gulpif(env === 'production', imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngcrush()]
+		})))
+		.pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
+		.pipe(connect.reload())
+});
+
+
+
+
+
+
 
 // Watch
 gulp.task('watch', function(){
@@ -115,6 +134,7 @@ gulp.task('watch', function(){
 	gulp.watch('components/sass/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['html']);
 	gulp.watch('builds/development/json/*.json', ['json']);
+	gulp.watch('builds/development/images/**/*.*', ['images']);
 });
 
 
@@ -130,6 +150,6 @@ gulp.task('connect', function(){
 
 // Default Task
 
-gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'connect', 'watch' ]);
+gulp.task('default', ['html', 'json', 'images', 'coffee', 'js', 'compass', 'connect', 'watch' ]);
 
 
