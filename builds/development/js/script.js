@@ -33,8 +33,53 @@ $(function() {
         });
     });
 
+    var slideqty = $('#featured .item').length;
 
-    console.log("main function");
+    for (var i = 0; i < slideqty; i++) {
+        var insertText = '<li data-target="#featured" data-slide-to="' + i + '"></li>';
+        $('#featured ol').append(insertText);
+    }
+
+    $('.carousel').carousel({
+            interval: 5000,
+            pause: 'hover'
+        })
+        // $('.carousel').carousel({
+        // 	interval: false;
+        // });
+    $('#featured').on('slide.bs.carousel', function() {
+        console.log("start sliding");
+    })
+
+    $('#featured').on('slid.bs.carousel', function() {
+        console.log("slided");
+    })
+
+
+    var faded = false;
+
+    $('#menu-btn').on('click', function() {
+        if (faded == false) {
+            $('#overlay, #overlay-back').fadeIn(500);
+        } else {
+            $('#overlay, #overlay-back').fadeOut(500);
+        }
+
+        faded = !faded;
+
+    });
+
+    $('#close-menu-btn').on('click', function() {
+        if (faded == false) {
+            $('#overlay, #overlay-back').fadeIn(500);
+        } else {
+            $('#overlay, #overlay-back').fadeOut(500);
+        }
+
+        faded = !faded;
+
+    });
+
 
 
 
@@ -59,6 +104,8 @@ $(document).ready(function() {
     });
 
     console.log("doc ready!");
+
+
 });
 
 },{}]},{},[1])
