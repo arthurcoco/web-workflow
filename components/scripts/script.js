@@ -20,7 +20,7 @@ $(function() {
 
         $('#featured .item').css('height', wheight);
 
-        $('#featured .item img').each(function() {
+        $('#featured .item bimg').each(function() {
             var imgSrc = $(this).attr('src');
 
             $(this).parent().css({
@@ -40,7 +40,7 @@ $(function() {
     }
 
     $('.carousel').carousel({
-            interval: 3000,
+            interval: 5000,
             // pause: 'hover'
         })
         // $('.carousel').carousel({

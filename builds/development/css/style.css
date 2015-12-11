@@ -136,7 +136,7 @@ header h3 {
 }
 #section-video .layer h3 {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
 }
 #section-video .blayer {
   position: absolute;
@@ -155,7 +155,7 @@ header h3 {
   top: 50%;
   left: 0%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   padding-top: 50px;
   padding-bottom: 50px;
 }
