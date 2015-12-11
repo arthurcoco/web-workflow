@@ -3,7 +3,7 @@ $(function() {
 
     $('#featured .item').css('height', wheight);
 
-    $('#featured .item img').each(function() {
+    $('#featured .item .bimg').each(function() {
         var imgSrc = $(this).attr('src');
 
         $(this).parent().css({
@@ -40,11 +40,11 @@ $(function() {
     }
 
     $('.carousel').carousel({
-            interval: 5000,
-            pause: 'hover'
+            interval: 3000,
+            // pause: 'hover'
         })
         // $('.carousel').carousel({
-        // 	interval: false;
+        //  interval: false;
         // });
     $('#featured').on('slide.bs.carousel', function() {
         console.log("start sliding");
@@ -79,6 +79,10 @@ $(function() {
 
     });
 
+
+
+    // var overlay = jQuery('<div id="overlay"> </div>');
+    // overlay.appendTo(document.body);
 
 
 

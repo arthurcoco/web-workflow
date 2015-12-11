@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PDM INTERNATIONAL</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300|Source+Serif+Pro|Open+Sans:400,800,700|Roboto+Slab:400,700,100,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.css">
@@ -27,43 +28,93 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><h3><i class="fa fa-envelope-o"></i></h3></a></li>
                         <li><a href="#"><h3><i class="fa fa-bars" id="menu-btn"></i></h3></a></li>
-                   </ul>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div id="fullpage">
+        <div class="section " id="section-video">
+            <video autoplay loop muted id="intro-video">
+                <source src="video/video-bg.mp4" type="video/mp4">
+                <!-- <source src="video/flowers.webm" type="video/webm"> -->
+            </video>
+            <div class="container">
+                <div class="layer">
+                    <h1>INTERIOR DESIGN</h1>
+                    <h1>SECOND LINE HERE</h1>
+                    <h2>Good design is about people and passion, we work hard, love what we do and so do our clients.</h2>
+                    <h3><i class="fa fa-television"></i></h3>
+                </div>
+                <div class="blayer">
+                    <h3><i class="fa fa-angle-down"></i></h3>
+                </div>
+            </div>
+        </div>
         <div class="section">
             <div class="carousel slide slidefullheight" data-ride="carousel" id="featured">
                 <ol class="carousel-indicators">
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <video controls autoplay loop>
-                            <source src="video/video-bg.mp4" type="video/mp4"> Your browser does not support the video tag.
-                        </video>
+                        <img class="bimg" src="images/slides/manulife_1.jpg" alt="Manu Life" />
                         <div class="carousel-caption">
-                            <h3>PDM INTERATIONAL</h3>
-                            <p>JOURNEY</p>
+                            <img src="images/logo/manulife.png" alt="Manu Life" />
+                            <h3>LIVE TODAY. PAVE THE WAY FOR TOMORROW.</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/slides/manulife_1.jpg" alt="Manu Life" />
+                        <img class="bimg" src="images/slides/manulife_2.jpg" alt="Manu Life" />
+                        <div class="carousel-caption">
+                            <img src="images/logo/manulife.png" alt="Manu Life" />
+                            <h3>LIVE TODAY. PAVE THE WAY FOR TOMORROW.</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="item">
-                        <img src="images/slides/manulife_2.jpg" alt="Manu Life" />
+                        <img class="bimg" src="images/slides/ubs_01.jpg" alt="Manu Life" />
+                        <div class="carousel-caption">
+                            <img src="images/logo/ubs.png" alt="Manu Life" />
+                            <h3>WE WILL NOT REST</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="item">
-                        <img src="images/slides/ubs_01.jpg" alt="Manu Life" />
+                        <img class="bimg" src="images/slides/ubs_02.jpg" alt="Manu Life" />
+                        <div class="carousel-caption">
+                            <img src="images/logo/ubs.png" alt="Manu Life" />
+                            <h3>WE WILL NOT REST</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="item">
-                        <img src="images/slides/ubs_02.jpg" alt="Manu Life" />
+                        <img class="bimg" src="images/slides/wpp_01.jpg" alt="Manu Life" />
+                        <div class="carousel-caption">
+                            <img src="images/logo/wpp.png" alt="Manu Life" />
+                            <h3>COMPANY SLOGAN</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="item">
-                        <img src="images/slides/wpp_01.jpg" alt="Manu Life" />
-                    </div>
-                    <div class="item">
-                        <img src="images/slides/wpp_02.jpg" alt="Manu Life" />
+                        <img class="bimg" src="images/slides/wpp_02.jpg" alt="Manu Life" />
+                        <div class="carousel-caption">
+                            <img src="images/logo/wpp.png" alt="Manu Life" />
+                            <h3>COMPANY SLOGAN</h3>
+                            <div class="vcs">
+                                <p>View Case Study</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a href="#featured" class="left carousel-control" role="button" data-slide="prev">
@@ -74,72 +125,88 @@
                 </a>
             </div>
         </div>
-        <div class="section">
-            <article class="heading">
-                <h1>Essential Info</h1>
-            </article>
-            <article id="usefulinfo">
-                <section id="arrivalinfo">
-                    <h2>Arrival Information</h2>
-                    <ul>
-                        <li><strong>Check-in:</strong> 3:00 PM</li>
-                        <li><strong>Check-out:</strong> 11:00 AM</li>
-                        <li><strong>Parking:</strong> Self-parking in the underground garage is ￡15 per day and valet-parking is ￡50 per day.</li>
-                        <li><strong>Airport Shuttle:</strong> Our complimentary airport shuttles leave every hour on the hour, and make trips to Heathrow and Gatwick airports.</li>
-                        <li><strong>Trains:</strong> The nearest Underground station is at Leicester Square.</li>
-                        <li><strong>Pet Policy:</strong> Pets of all sizes and types are allowed in designated pet rooms, and the specified common areas. Service animals are allowed everywhere.</li>
-                    </ul>
-                </section>
-                <section class="checklist" id="services">
-                    <h2>Services and Amenities</h2>
-                    <p>Our services and amenities are designed to make your travel easy, your stay comfortable, and your experience one-of-a-kind.</p>
-                    <ul>
-                        <li>Indoor pool</li>
-                        <li>24-hour fitness center</li>
-                        <li>Massage therapy</li>
-                        <li>Full service spa</li>
-                        <li>In-room jacuzzi tubs</li>
-                        <li>Rooftop café &amp; smoothie bar</li>
-                        <li>Coffee bar &amp; pastry shop</li>
-                        <li>Traditional continental breakfast</li>
-                        <li>24-hour concierge service</li>
-                        <li>Business center</li>
-                        <li>Complimentary wireless service</li>
-                        <li>Laundry &amp; dry cleaning service</li>
-                        <li>Daily paper</li>
-                        <li>Certified "green" hotel</li>
-                        <li>Pet-friendly rooms &amp; common areas</li>
-                    </ul>
-                </section>
-                <section class="checklist" id="accessibility">
-                    <h2>Accessibility</h2>
-                    <p>We're committed to maintaining the same quality of service for every individual. We offer the following facilities for those with special needs:</p>
-                    <ul>
-                        <li>Grab bars on tub walls</li>
-                        <li>Shower chairs</li>
-                        <li>Hand held shower sprayers</li>
-                        <li>Higher toilets &amp; toilet modifiers</li>
-                        <li>Lower sink faucet handles</li>
-                        <li>Wheelchair clearance under sinks &amp; vanity</li>
-                        <li>Lower racks in closet</li>
-                        <li>TDD machines</li>
-                        <li>Telephone light signalers &amp; smoke alarms</li>
-                        <li>Telephone amplification handsets</li>
-                        <li>Closed captioned television converters</li>
-                        <li>Vibrating alarm clocks</li>
-                        <li>Telephones with volume control</li>
-                    </ul>
-                </section>
-            </article>
-            <article id="greenprogram">
-                <h2>Landon Green Program</h2>
-                <p><strong>The Landon Hotel - London</strong> was recently renovated, and we considered the impact on the earth the entire way. From green building materials, to solar power, to energy-friendly lighting and appliances throughout the hotel - we’re saving energy in every socket, outlet, and switch. We’ve also initiated a recycling and composting program that reduces the load to local landfills, while providing valuable raw material for use in new products, or in the case of compost, for use in local gardens and landscapes.</p>
-            </article>
-        </div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-    </div>
+        <div class="section nonslide">
+            <div class="container">
+                <article>
+                    <h3 class="title">ABOUT PDM</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
+                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
+                </article>
 
+                <article>
+                    <h3 class="title">OUR STRENGTH</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
+                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
+                </article>
+                <article>
+                    <h3 class="title">PEOPLE</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
+                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
+                </article>
+
+                <article>
+                    <h3 class="title">AWARDS</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
+                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
+                </article>
+
+                <article>
+                    <h3 class="title">OUR APPROACH</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">DESIGN + BUILD + CONSTRUCTION</h1>
+                    <p>How do we do it?</p>
+                </article>
+            </div>
+        </div>
+        <div class="section nonslide">
+            <div class="container">
+                <article>
+                    <h3 class="title">BRANDS &amp; CLIENTS</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">THE COMPANY WE KEEP</h1>
+                    <p>11</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="section nonslide" id="team">
+            <div class="container">
+                <article>
+                    <h3 class="title">LEADERSHIP</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">MEET THE TEAM</h1>
+                    <p>11</p>
+                </article>
+            </div>
+        </div>
+
+
+        <div class="section nonslide" id="team">
+            <div class="container">
+                <article>
+                    <h3 class="title">AWARDS &amp; ASSOCIATIONS</h3>
+                    <div class="line"></div>
+
+                </article>
+            </div>
+        </div>
+
+        <div class="section nonslide">
+            <div class="container">
+                <article>
+                    <h3 class="title">CONTACT US</h3>
+                    <div class="line"></div>
+                    <h1 class="heading">LET'S GET IN TOUCH</h1>
+                    <p>Whether you're interested in working with us or for us, we're always happy to chat. Tell us some more about what you're looking for and how we can help.</p>
+                </article>
+            </div>
+        </div>
+
+    </div>
     <div id="overlay-back"></div>
     <div id="overlay"><span>YOUR HTML GOES HERE<a href="#" id="close-menu-btn"><h1><i class="fa fa-times"></i></h1></a></span></div>
     <script src="js/script.js"></script>
