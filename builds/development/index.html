@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/vendors/jquery.easings.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/vendors/jquery.slimscroll.min.js"></script>
@@ -36,13 +37,13 @@
     <div id="fullpage">
         <div class="section " id="section-video">
             <video autoplay loop muted id="intro-video">
-                <source src="video/video-bg.mp4" type="video/mp4">
+                <source src="video/ubs.webm" type="video/webm">
                 <!-- <source src="video/flowers.webm" type="video/webm"> -->
             </video>
             <div class="container">
                 <div class="layer">
-                    <h1>INTERIOR DESIGN</h1>
-                    <h1>SECOND LINE HERE</h1>
+                    <h1>FIRST LINE</h1>
+                    <h1>SECOND LINE GOES HERE</h1>
                     <h2>Good design is about people and passion, we work hard, love what we do and so do our clients.</h2>
                     <h3><i class="fa fa-television"></i></h3>
                 </div>
@@ -133,79 +134,271 @@
                     <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
                     <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
                 </article>
-
                 <article>
-                    <h3 class="title">OUR STRENGTH</h3>
+                    <h3 class="title">VERTICALS</h3>
                     <div class="line"></div>
-                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
-                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
+                    <div class="row">
+                        <section class="colitem col-sm-4">Corporate Space</section>
+                        <section class="colitem col-sm-4">Hospitality</section>
+                        <section class="colitem col-sm-4">Residential</section>
+                        <section class="colitem col-sm-4">Food &amp; Beverage</section>
+                        <section class="colitem col-sm-4">Building</section>
+                    </div>
                 </article>
                 <article>
-                    <h3 class="title">PEOPLE</h3>
+                    <h3 class="title">EXPERTISE</h3>
                     <div class="line"></div>
-                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
-                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
-                </article>
-
-                <article>
-                    <h3 class="title">AWARDS</h3>
-                    <div class="line"></div>
-                    <h1 class="heading">INTEGRATED MARKETING + DIGITAL PRODUCTS</h1>
-                    <p>PDM International is a leading Asia Pacific based Interior Design Consultancy. Established over 18 years ago, we currently employ 300+ people in thirteen offices across Asia Pacific. Our studios are located in: Auckland, Bangkok, Beijing, Chengdu, Christchurch, Hong Kong, Jakarta, Kuala Lumpur, Melbourne, Seoul, Shanghai, Singapore and Sydney.</p>
-                </article>
-
-                <article>
-                    <h3 class="title">OUR APPROACH</h3>
-                    <div class="line"></div>
-                    <h1 class="heading">DESIGN + BUILD + CONSTRUCTION</h1>
-                    <p>How do we do it?</p>
+                    <div class="row">
+                        <section class="colitem col-sm-4">Creative</section>
+                        <section class="colitem col-sm-4">Professional Services</section>
+                        <section class="colitem col-sm-4">Financial</section>
+                    </div>
                 </article>
             </div>
-        </div>
-        <div class="section nonslide">
+            <article>
+                <h3 class="title">OUR APPROACH</h3>
+                <div class="line"></div>
+                <h1 class="heading">DESIGN + BUILD + CONSTRUCTION</h1>
+                <div class="embed-responsive embed-responsive-16by9 no-h-padding slidevideo">
+                    <iframe src="https://www.youtube.com/embed/Kj42NeQHb_8" frameborder="0" class="embed-responsive-item"></iframe>
+                </div>
+            </article>
             <div class="container">
                 <article>
                     <h3 class="title">BRANDS &amp; CLIENTS</h3>
                     <div class="line"></div>
                     <h1 class="heading">THE COMPANY WE KEEP</h1>
-                    <p>11</p>
+                    <div class="row last-row">
+                        <section class="colitem col-sm-2 "><img src="images/logo/client/visa.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/sony.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/samsung.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/philips.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/novartis.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/nab.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/microsoft.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2 "><img src="images/logo/client/lufthansa.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/loreal.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/hermes.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/ford.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/esteelauder.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/creditsuisse.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/cocacola.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/cisco.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/cargill.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/bhp.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/bbc.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/basf.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/adidas.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/philips.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/novartis.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/nab.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/microsoft.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2 "><img src="images/logo/client/lufthansa.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/loreal.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/bhp.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/bbc.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/basf.jpg" class="client-logo" /></section>
+                        <section class="colitem col-sm-2"><img src="images/logo/client/adidas.jpg" class="client-logo" /></section>
+                    </div>
                 </article>
             </div>
         </div>
-
         <div class="section nonslide" id="team">
             <div class="container">
                 <article>
                     <h3 class="title">LEADERSHIP</h3>
                     <div class="line"></div>
                     <h1 class="heading">MEET THE TEAM</h1>
-                    <p>11</p>
+                    <div class="row last-row">
+                        <section class="colitem  col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem  col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem  col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                        <section class="colitem col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <img src="images/team/default-avatar.png" class="img-circle">
+                            <h1>Division Manager</h1>
+                            <h2>Division Manager Position</h2>
+                        </section>
+                    </div>
                 </article>
             </div>
         </div>
-
-
-        <div class="section nonslide" id="team">
+        <div class="section nonslide">
             <div class="container">
                 <article>
                     <h3 class="title">AWARDS &amp; ASSOCIATIONS</h3>
                     <div class="line"></div>
-
+                    <div class="row last-row">
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/1.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/2.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/3.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/4.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/5.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/6.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/7.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/3.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/4.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/5.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/6.jpg" class="award-logo" /></section>
+                        <section class="colitem col-md-3 col-sm-6 col-xs-12"><img src="images/awards/3.jpg" class="award-logo" /></section>
+                    </div>
                 </article>
             </div>
         </div>
-
         <div class="section nonslide">
             <div class="container">
                 <article>
                     <h3 class="title">CONTACT US</h3>
                     <div class="line"></div>
                     <h1 class="heading">LET'S GET IN TOUCH</h1>
-                    <p>Whether you're interested in working with us or for us, we're always happy to chat. Tell us some more about what you're looking for and how we can help.</p>
+                    <p>Whether you're interested in working with us or for us, we're always happy to chat.
+                        <br/>Tell us some more about what you're looking for and how we can help.</p>
+                    <p class="contact-tel">For Inquiries: +852.3586.3688</p>
+                    <ul class="contact-item">
+                        <li class="well">Drop us a line</li>
+                        <li class="well second">Careers@PDM</li>
+                    </ul>
                 </article>
             </div>
-        </div>
+            <div id="map" class="no-h-padding"></div>
+            <div class="container">
+                <div class="row last-row office">
+                    <section class="col-md-4">
+                        <h1>PDM HONG KONG</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM SHANGHAI</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM BEIJING</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM CHENGDU</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM AUCKLAND</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM CHRISTCHURCH</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM JAKARTA</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM KULA LUMPUR</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM MELBOURNE</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM SEOUL</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM SIGNAPORE</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                    <section class="col-md-4">
+                        <h1>PDM SYDNEY</h1>
+                        <h3>Level 5, Bldg B, 98 Yanping Road</br>Shanghai, China 200042</h3>
+                        <h3 class="direction">Direction</h3>
+                    </section>
+                </div>
+            </div>
+            <div class="no-h-padding" id="footer">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 contact">
+                        <img class="logo" src="images/logo/pdm_dark_full.svg"/>
+                        <h3 class="addr1">Level 5, Bldg. B, 98 Yanping Road</h3>
+                        <h3 class="addr2">Shanghai, China 200042</h3>
 
+                        <h3 class="tel">+86.021.6272.8833</h4>
+                        <h2 class="well">Drop us a line</h2>
+
+                        <h4 class="copyright">&copy;2015, All rights Reserved</h4>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 social-media">
+                        <ul>
+                            <li><i class="fa fa-linkedin-square"></i></li>
+                            <li><i class="fa fa-facebook-official"></i></li>
+                            <li><i class="fa fa-weixin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="overlay-back"></div>
     <div id="overlay"><span>YOUR HTML GOES HERE<a href="#" id="close-menu-btn"><h1><i class="fa fa-times"></i></h1></a></span></div>

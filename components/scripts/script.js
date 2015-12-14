@@ -1,5 +1,8 @@
 $(function() {
     var wheight = $(window).height();
+    var wwidth = $(window).width();
+
+    $('#map').css('height', wwidth/3);
 
     $('#featured .item').css('height', wheight);
 
@@ -17,6 +20,9 @@ $(function() {
 
     $(window).resize(function() {
         var wheight = $(window).height();
+        var wwidth = $(window).width();
+
+        $('#map').css('height', wwidth/3);
 
         $('#featured .item').css('height', wheight);
 
@@ -47,11 +53,11 @@ $(function() {
         //  interval: false;
         // });
     $('#featured').on('slide.bs.carousel', function() {
-        console.log("start sliding");
+        // console.log("start sliding");
     })
 
     $('#featured').on('slid.bs.carousel', function() {
-        console.log("slided");
+        // console.log("slided");
     })
 
 
@@ -79,7 +85,24 @@ $(function() {
 
     });
 
+    var wwidth = $(window).width();
 
+
+
+
+    function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: new google.maps.LatLng(22.286207, 114.190389),
+            zoom: 15,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+
+
+    google.maps.event.addDomListener(window, 'load', initialize);
 
     // var overlay = jQuery('<div id="overlay"> </div>');
     // overlay.appendTo(document.body);
@@ -105,6 +128,9 @@ $(document).ready(function() {
         }
 
     });
+
+
+
 
     console.log("doc ready!");
 
