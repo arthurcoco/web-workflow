@@ -1,4 +1,6 @@
 $(function() {
+    "use strict";
+
     var wheight = $(window).height();
     var wwidth = $(window).width();
 
@@ -107,6 +109,11 @@ $(function() {
     // var overlay = jQuery('<div id="overlay"> </div>');
     // overlay.appendTo(document.body);
 
+    var topoffset = 50;
+    ${'body'}.Scrollspy({
+        target: 'header .navbar',
+        offset: topoffset;
+    })
 
 
 });

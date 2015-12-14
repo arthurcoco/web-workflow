@@ -1,3 +1,7 @@
+body{
+    position: relative;
+}
+
 header {
     .logo {
         width: $logo_width;
@@ -118,6 +122,15 @@ header h3 {
 #section-video {
     /*solves problem with overflowing video in Mac with Chrome */
     overflow: hidden;
+    
+    // darken video
+    background-color: black;
+
+    video{
+        opacity: 0.7;
+
+    }
+
     .layer {
         position: absolute;
         z-index: 4;
@@ -155,6 +168,16 @@ header h3 {
             color: white;
             font-size: 40px;
         }
+    }
+
+    .mask {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: black;
     }
 }
 
@@ -337,32 +360,28 @@ header h3 {
     .contact {
         text-align: left;
         font-family: 'Roboto Slab', serif;
-
         .logo {
             height: 20px;
         }
-
-        h2, h3, h4{
+        h2,
+        h3,
+        h4 {
             font-size: 15px;
             font-weight: 300;
             margin: 0px;
             padding: 0px;
         }
-
-        .addr1{
+        .addr1 {
             padding-top: 40px;
         }
-
-        .addr2{
+        .addr2 {
             padding-top: 10px;
             padding-bottom: 50px;
         }
-
-        .tel{
+        .tel {
             padding-bottom: 20px;
         }
-
-        .well{
+        .well {
             font-size: 25px;
             font-weight: 100;
             font-style: italic;
@@ -371,16 +390,12 @@ header h3 {
             padding: 10px 50px 10px 50px;
             margin-bottom: 90px;
         }
-
-        .copyright{
+        .copyright {
             font-size: 11px;
         }
-
         margin-top: 20px;
         margin-bottom: 40px;
-
     }
-
     .social-media {
         text-align: right;
         font-size: 25px;
@@ -394,6 +409,23 @@ header h3 {
         margin-top: 10px;
         padding-right: 20px;
     }
+}
+
+video,
+#start,
+#stop,
+#pause,
+#plus,
+#minus,
+#mute {
+    /* background color */
+    background-color: #ffcccc;
+    /* background gradient */
+    background-image: linear-gradient(top, #fff, #fcc);
+    background-image: -moz-linear-gradient(top, #fff, #fcc);
+    background-image: -webkit-linear-gradient(top, #fff, #fcc);
+    background-image: -o-linear-gradient(top, #fff, #fcc);
+    background-image: -ms-linear-gradient(top, #fff, #fcc);
 }
 
 // #overlay {
