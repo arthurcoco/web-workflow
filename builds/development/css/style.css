@@ -18,6 +18,42 @@ header h3 {
   margin-top: 0px;
 }
 
+.dark-nav ul li h3 {
+  color: #701413;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  /* ...and now for the proper property */
+  transition: .5s;
+}
+.dark-nav #main-logo {
+  width: 300px;
+  padding-top: 5px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.light-nav ul li h3 {
+  color: white;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  /* ...and now for the proper property */
+  transition: .5s;
+}
+.light-nav #main-logo {
+  width: 70px;
+  padding-top: 0px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
 #featured .item {
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,10 +68,6 @@ header h3 {
   background-position: center center;
   width: 100%;
   height: 100%;
-}
-
-header .logo {
-  width: 70px;
 }
 
 header .navbar-default {
@@ -84,9 +116,9 @@ header h3 {
 }
 
 /* Layer with position absolute in order to have it over the video
-    * --------------------------------------- */
+* --------------------------------------- */
 /* Centered texts in each section
-    * --------------------------------------- */
+* --------------------------------------- */
 .section {
   text-align: center;
   overflow: hidden;

@@ -19,10 +19,10 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="cnavbar">
+            <div class="container"  >
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#featured"><img src="images/logo/pdm_dark.svg" class="logo"></a>
+                    <a class="navbar-brand" href="#featured"><img src="images/logo/pdm_dark.svg" class="logo" id="main-logo"></a>
                     </a>
                 </div>
                 <div>
@@ -35,7 +35,7 @@
         </nav>
     </header>
     <div id="fullpage">
-        <div class="section " id="section-video">
+        <div class="section " id="section-video" data-anchor="sfeatured">
             <video autoplay loop muted id="intro-video">
                 <source src="video/ubs.webm" type="video/webm">
                 <!-- <source src="video/flowers.webm" type="video/webm"> -->
@@ -53,7 +53,7 @@
                <!--  <div class="mask">11</br></div> -->
             </div>
         </div>
-        <div class="section">
+        <div class="section" data-anchor="scarousel">
             <div class="carousel slide slidefullheight" data-ride="carousel" id="featured">
                 <ol class="carousel-indicators">
                 </ol>
@@ -127,8 +127,8 @@
                 </a>
             </div>
         </div>
-        <div class="section nonslide">
-            <div class="container">
+        <div class="section nonslide" data-anchor="snon-slide">
+            <div class="container" id="content">
                 <article>
                     <h3 class="title">ABOUT PDM</h3>
                     <div class="line"></div>

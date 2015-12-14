@@ -4,7 +4,7 @@ $(function() {
     var wheight = $(window).height();
     var wwidth = $(window).width();
 
-    $('#map').css('height', wwidth/3);
+    $('#map').css('height', wwidth / 3);
 
     $('#featured .item').css('height', wheight);
 
@@ -24,7 +24,7 @@ $(function() {
         var wheight = $(window).height();
         var wwidth = $(window).width();
 
-        $('#map').css('height', wwidth/3);
+        $('#map').css('height', wwidth / 3);
 
         $('#featured .item').css('height', wheight);
 
@@ -62,30 +62,32 @@ $(function() {
         // console.log("slided");
     })
 
+    /*
+        var faded = false;
 
-    var faded = false;
+        $('#menu-btn').on('click', function() {
+            if (faded == false) {
+                $('#overlay, #overlay-back').fadeIn(500);
+            } else {
+                $('#overlay, #overlay-back').fadeOut(500);
+            }
 
-    $('#menu-btn').on('click', function() {
-        if (faded == false) {
-            $('#overlay, #overlay-back').fadeIn(500);
-        } else {
-            $('#overlay, #overlay-back').fadeOut(500);
-        }
+            faded = !faded;
 
-        faded = !faded;
+        });
 
-    });
+        $('#close-menu-btn').on('click', function() {
+            if (faded == false) {
+                $('#overlay, #overlay-back').fadeIn(500);
+            } else {
+                $('#overlay, #overlay-back').fadeOut(500);
+            }
 
-    $('#close-menu-btn').on('click', function() {
-        if (faded == false) {
-            $('#overlay, #overlay-back').fadeIn(500);
-        } else {
-            $('#overlay, #overlay-back').fadeOut(500);
-        }
+            faded = !faded;
 
-        faded = !faded;
+        });
 
-    });
+    */
 
     var wwidth = $(window).width();
 
@@ -109,12 +111,6 @@ $(function() {
     // var overlay = jQuery('<div id="overlay"> </div>');
     // overlay.appendTo(document.body);
 
-    var topoffset = 50;
-    ${'body'}.Scrollspy({
-        target: 'header .navbar',
-        offset: topoffset;
-    })
-
 
 });
 
@@ -132,7 +128,51 @@ $(document).ready(function() {
             // }, 151000);
             //playing the video
             // $('video').get(0).play();
-        }
+        },
+        anchors: ['sfeatured', 'scarousel', 'snon-slide'],
+        afterLoad: function(anchorLink, index) {
+            //using anchorLink
+            var target = $("#cnavbar");
+            if (anchorLink == 'scarousel') {
+                if (target.hasClass('dark-nav')) {
+                    console.log('remove dark');
+                    target.addClass('light-nav');
+                    target.removeClass('dark-nav');
+                } 
+
+                // set logo
+                console.log($('#main-logo').attr('src'));
+                $('#main-logo').attr('src', "images/logo/pdm_dark.svg");
+                $('#cnavbar').style.backgroundColor = "red";
+
+    
+
+            }
+
+            if (anchorLink == 'snon-slide') {
+
+                if (!target.hasClass('dark-nav')) {
+                    console.log('add dark');
+                   target.addClass('dark-nav');
+                   target.removeClass('light-nav');
+                   $('#main-logo').attr('src', "images/logo/pdm.svg");
+                } 
+            }
+
+
+        },
+        // onLeave: function(index, nextIndex, direction){
+        //     var leavingSection = $(this);
+
+        //     //after leaving section 2
+        //     if(index == 2 && direction =='down'){
+        //         console.log("Going to section 3!");
+        //     }
+
+        //     else if(index == 2 && direction == 'up'){
+        //         console.log("Going to section 1!");
+        //     }
+        // }
 
     });
 

@@ -18,6 +18,9 @@ header h3 {
   margin-top: 0px;
 }
 
+.dark-nav {
+  background-color: red;
+}
 .dark-nav ul li h3 {
   color: #701413;
   -o-transition: .5s;
@@ -36,6 +39,9 @@ header h3 {
   transition: opacity 1s ease-in-out;
 }
 
+.light-nav {
+  background-color: blue;
+}
 .light-nav ul li h3 {
   color: white;
   -o-transition: .5s;
