@@ -112,6 +112,16 @@ $(function() {
     // var overlay = jQuery('<div id="overlay"> </div>');
     // overlay.appendTo(document.body);
 
+    $('#contactModal').on('shown.bs.modal', function(e) {
+        $("div").last().addClass("bg-pdmred");
+    })
+
+    $('#contactModal').on('hidden.bs.modal', function(e) {
+        console.log("Hidded");
+    })
+
+
+
 
 });
 
@@ -139,14 +149,14 @@ $(document).ready(function() {
                     console.log('remove dark');
                     target.addClass('light-nav');
                     target.removeClass('dark-nav');
-                } 
+                }
 
                 // set logo
                 console.log($('#main-logo').attr('src'));
                 $('#main-logo').attr('src', "images/logo/pdm_dark.svg");
                 $('#cnavbar').css('background-color', 'transparent');
 
-    
+
 
             }
 
@@ -154,11 +164,11 @@ $(document).ready(function() {
 
                 if (!target.hasClass('dark-nav')) {
                     console.log('add dark');
-                   target.addClass('dark-nav');
-                   target.removeClass('light-nav');
-                   $('#main-logo').attr('src', "images/logo/pdm.svg");
-                   $('#cnavbar').css('background-color', 'rgba(255,255,255,0.8)');
-                } 
+                    target.addClass('dark-nav');
+                    target.removeClass('light-nav');
+                    $('#main-logo').attr('src', "images/logo/pdm.svg");
+                    $('#cnavbar').css('background-color', 'rgba(255,255,255,0.8)');
+                }
             }
 
 
@@ -177,7 +187,6 @@ $(document).ready(function() {
         // }
 
     });
-
 
 
 

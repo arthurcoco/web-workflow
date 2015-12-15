@@ -370,34 +370,35 @@ header h3 {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 1px 50px 20px 50px;
 }
-#footer .contact {
+
+.contact {
   text-align: left;
   font-family: 'Roboto Slab', serif;
   margin-top: 20px;
   margin-bottom: 40px;
 }
-#footer .contact .logo {
+.contact .logo {
   height: 20px;
 }
-#footer .contact h2,
-#footer .contact h3,
-#footer .contact h4 {
+.contact h2,
+.contact h3,
+.contact h4 {
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
   padding: 0px;
 }
-#footer .contact .addr1 {
+.contact .addr1 {
   padding-top: 40px;
 }
-#footer .contact .addr2 {
+.contact .addr2 {
   padding-top: 10px;
   padding-bottom: 50px;
 }
-#footer .contact .tel {
+.contact .tel {
   padding-bottom: 20px;
 }
-#footer .contact .well {
+.contact .well {
   font-size: 25px;
   font-weight: 100;
   font-style: italic;
@@ -406,20 +407,152 @@ header h3 {
   padding: 10px 50px 10px 50px;
   margin-bottom: 90px;
 }
-#footer .contact .copyright {
+.contact .copyright {
   font-size: 11px;
 }
-#footer .social-media {
+
+.modal-body {
+  padding-top: 0px;
+}
+.modal-body .contact {
+  padding-top: 0px;
+  margin-top: 0px;
+  color: white;
+  text-align: right;
+  padding-right: 50px;
+}
+.modal-body .contact .close-icon {
+  font-size: 40px;
+}
+.modal-body .contact .well {
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+.modal-body .contact .career {
+  margin-bottom: 20px;
+}
+.modal-body .message {
+  text-align: left;
+}
+.modal-body .message h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+.modal-body .message h3,
+.modal-body .message h4 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+}
+.modal-body .message h4 {
+  margin-top: 50px;
+}
+.modal-body .message ul {
+  list-style: none;
+  padding: 0;
+}
+.modal-body .message input {
+  font-size: 30px;
+  height: 50px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  color: white;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.modal-body .message .questions {
+  margin-bottom: 50px;
+}
+.modal-body .message .questions label {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.modal-body .message .ulinput {
+  margin-top: 40px;
+  border-bottom: 1px solid white;
+  margin-bottom: 50px;
+}
+.modal-body .message textarea {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  margin-bottom: 50px;
+  float: left;
+  width: 70%;
+}
+.modal-body .message .btn {
+  margin-left: 40px;
+  width: 100px;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  border: 1px solid white;
+  color: white;
+}
+.modal-body .message .buttons {
+  margin-top: 50px;
+}
+.modal-body .message .buttons .well {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  font-style: italic;
+  display: inline-block;
+  background: transparent;
+  padding: 10px 25px 10px 25px;
+  margin-right: 20px;
+  min-width: 200px;
+  letter-spacing: 2px;
+}
+.modal-body .case-studies {
+  padding-left: 50px;
+}
+.modal-body .case-studies h1,
+.modal-body .case-studies li {
+  font-size: 60px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+.modal-body .case-studies h3 {
+  margin-top: 60px;
+  margin-left: 30px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.modal-body .case-studies ul {
+  margin-left: 30px;
+  margin-top: 25px;
+  padding: 0px;
+  list-style: none;
+}
+.modal-body .case-studies li {
+  margin-bottom: 40px;
+}
+
+.social-media {
   text-align: right;
   font-size: 25px;
   margin-top: 10px;
   padding-right: 20px;
 }
-#footer .social-media li {
+.social-media li {
   display: inline-block;
   list-style-type: none;
 }
-#footer .social-media li:not(:last-child) {
+.social-media li:not(:last-child) {
   margin-right: 15px;
 }
 
@@ -438,4 +571,45 @@ video,
   background-image: -webkit-linear-gradient(top, #fff, #fcc);
   background-image: -o-linear-gradient(top, #fff, #fcc);
   background-image: -ms-linear-gradient(top, #fff, #fcc);
+}
+
+body .modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.modal {
+  /* ... */
+  overflow-y: scroll;
+}
+
+.modal-backdrop {
+  opacity: 0.95 !important;
+}
+
+.bg-pdmred {
+  background-color: #701413;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  /* ...and now for the proper property */
+  transition: .5s;
+}
+
+.modal-dialog {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.modal-dialog .modal-content {
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }

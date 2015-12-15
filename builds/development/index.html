@@ -20,15 +20,15 @@
 <body>
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="cnavbar">
-            <div class="container"  >
+            <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#featured"><img src="images/logo/pdm_dark.svg" class="logo" id="main-logo"></a>
                     </a>
                 </div>
                 <div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><h3><i class="fa fa-envelope-o"></i></h3></a></li>
-                        <li><a href="#"><h3><i class="fa fa-bars" id="menu-btn"></i></h3></a></li>
+                        <li><a href="#"><h3><i class="fa fa-envelope-o" data-toggle="modal" data-target="#contactModal"></i></h3></a></li>
+                        <li><a href="#"><h3><i class="fa fa-bars" id="menu-btn" data-toggle="modal" data-target="#casestudyModal"></i></h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="blayer">
                     <h3><i class="fa fa-angle-down"></i></h3>
                 </div>
-               <!--  <div class="mask">11</br></div> -->
+                <!--  <div class="mask">11</br></div> -->
             </div>
         </div>
         <div class="section" data-anchor="scarousel">
@@ -380,10 +380,9 @@
             <div class="no-h-padding" id="footer">
                 <div class="row">
                     <div class="col-md-6 col-xs-12 contact">
-                        <img class="logo" src="images/logo/pdm_dark_full.svg"/>
+                        <img class="logo" src="images/logo/pdm_dark_full.svg" />
                         <h3 class="addr1">Level 5, Bldg. B, 98 Yanping Road</h3>
                         <h3 class="addr2">Shanghai, China 200042</h3>
-
                         <h3 class="tel">+86.021.6272.8833</h4>
                         <h2 class="well">Drop us a line</h2>
 
@@ -401,8 +400,89 @@
             </div>
         </div>
     </div>
-    <div id="overlay-back"></div>
-    <div id="overlay"><span>YOUR HTML GOES HERE<a href="#" id="close-menu-btn"><h1><i class="fa fa-times"></i></h1></a></span></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="casestudyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 case-studies">
+                        <h1>Home</h1>
+                        <h3>CASE STUDIES</h3>
+                        <ul>
+                            <li>Manulife</li>
+                            <li>WPP</li>
+                            <li>UBS</li>
+                            <li>GAP</li>
+                            <li>L'Oreal</li>
+                            <li>Adidas</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-xs-12 contact">
+                        <h2 class="close-icon"><i class="fa fa-times" data-dismiss="modal"></i></h2>
+                        <h2 class="well">Drop us a line</h2>
+                        <h3 class="career">Careers@PDM</h3>
+                        <h3 class="addr1">Level 5, Bldg. B, 98 Yanping Road</h3>
+                        <h3 class="addr2">Shanghai, China 200042</h3>
+                        <h3 class="tel">+86.021.6272.8833</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-11 col-xs-11 message">
+                        <h1>HELLO!</h1>
+
+                        <ul class="questions">
+                            <li><label>My Name is</label></li>
+                            <li><input class="form-control" placeholder="Full Name"></li></li>
+                            <li><label>I'm the</label></li>
+                            <li><input class="form-control" placeholder="Job Title"></li></li>
+                            <li><label>here at</label></li>
+                             <li><input class="form-control" placeholder="Company Name"></li></li>
+                            <li><label>Email me @</label></li>
+                             <li><input class="form-control" placeholder="Email Address"></li></li>
+                            <li><label>and/or call me @</label></li>
+                             <li><input class="form-control" placeholder="Phone Number"></li></li>
+                        </ul>
+                        
+                        <h3>Tell us a little more why you came by today:</h3>
+                        <ul class="buttons">
+                            <li class="well">Hire PDM</li>
+                            <li class="well">Work at PDM</li>
+                            <li class="well">Just Saying Hi</li>
+                        </ul>
+
+                        <h4>I Heard about PDM from:</h4>
+                        <input class="form-control ulinput" placeholder="I heard about PDM from"></li>
+
+                        <div>
+                            <textarea class="form-control" rows="15" placeholder="Type your message here..."></textarea>
+                            <button type="button" class="btn">Send</button>
+
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-1 col-xs-1 contact">
+                        <h2 class="close-icon"><i class="fa fa-times" data-dismiss="modal"></i></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 
