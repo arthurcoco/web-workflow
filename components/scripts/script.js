@@ -143,7 +143,7 @@ $(document).ready(function() {
         afterLoad: function(anchorLink, index) {
             //using anchorLink
             var target = $("#cnavbar");
-            if (anchorLink == 'scarousel') {
+            if (anchorLink == 'scarousel' || anchorLink == 'sfeatured') {
                 if (target.hasClass('dark-nav')) {
                     console.log('remove dark');
                     target.addClass('light-nav');
