@@ -15,15 +15,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/vendors/jquery.slimscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $(".loader").fadeOut("slow");
-    })
-    </script>
 </head>
 
 <body>
-    <div class="loader"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="cnavbar">
             <div class="container">
@@ -487,6 +485,18 @@
     </div>
     </div>
     <script src="js/script.js"></script>
+    <!-- Preloader -->
+    <script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({
+                'overflow': 'visible'
+            });
+        })
+        //]]>
+    </script>
 </body>
 
 </html>

@@ -188,7 +188,7 @@ $(document).ready(function() {
     });
 
 
-     $(".loader").fadeOut("slow");
+    $(".loader").fadeOut("slow");
     console.log("doc ready!");
 
 
