@@ -23,7 +23,7 @@ var env,
 
 env = process.env.NODE_ENV || 'development';
 
-// env = 'production';
+env = 'production';
 // env = 'development';
 
 if (env === 'development'){
@@ -127,6 +127,14 @@ gulp.task('images', function(){
 });
 
 
+gulp.task('video', function(){
+	// any images in any sub-folders
+	gulp.src('builds/development/video/*.*')
+		.pipe(gulpif(env === 'production', gulp.dest(outputDir+'video')))
+		.pipe(connect.reload())
+});
+
+
 
 
 
@@ -140,6 +148,7 @@ gulp.task('watch', function(){
 	gulp.watch('builds/development/*.html', ['html']);
 	gulp.watch('builds/development/json/*.json', ['json']);
 	gulp.watch('builds/development/images/**/*.*', ['images']);
+	gulp.watch('builds/development/video/*.*', ['video']);
 });
 
 
@@ -155,6 +164,6 @@ gulp.task('connect', function(){
 
 // Default Task
 
-gulp.task('default', ['html', 'json', 'images', 'coffee', 'js', 'compass', 'connect', 'watch' ]);
+gulp.task('default', ['html', 'json', 'images', 'video', 'coffee', 'js', 'compass', 'connect', 'watch' ]);
 
 
