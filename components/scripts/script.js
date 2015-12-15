@@ -143,7 +143,7 @@ $(document).ready(function() {
                 // set logo
                 console.log($('#main-logo').attr('src'));
                 $('#main-logo').attr('src', "images/logo/pdm_dark.svg");
-                $('#cnavbar').style.backgroundColor = "red";
+                $('#cnavbar').css('background-color', 'transparent');
 
     
 
@@ -156,6 +156,7 @@ $(document).ready(function() {
                    target.addClass('dark-nav');
                    target.removeClass('light-nav');
                    $('#main-logo').attr('src', "images/logo/pdm.svg");
+                   $('#cnavbar').css('background-color', 'rgba(255,255,255,0.8)');
                 } 
             }
 

@@ -23,6 +23,8 @@
             color: white;
             margin-top: 0px;
         }
+
+        z-index: 100000;
     }
     
     .dark-nav {
@@ -164,7 +166,7 @@
         // darken video
         background-color: black;
         video {
-            opacity: 0.7;
+            opacity: 0.5;
         }
         .layer {
             position: absolute;
