@@ -15,9 +15,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/vendors/jquery.slimscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    })
+    </script>
 </head>
 
 <body>
+    <div class="loader"></div>
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="cnavbar">
             <div class="container">
@@ -36,7 +42,7 @@
     </header>
     <div id="fullpage">
         <div class="section " id="section-video" data-anchor="sfeatured">
-            <video autoplay loop muted id="intro-video">
+            <video autoplay loop muted poster="images/poster/ubs.jpg" id="intro-video">
                 <source src="video/ubs.webm" type="video/webm">
                 <!-- <source src="video/flowers.webm" type="video/webm"> -->
             </video>
@@ -204,7 +210,7 @@
                 </article>
             </div>
         </div>
-        <div class="section nonslide" id="team">
+        <div class="section nonslide" data-anchor="steam" id="team">
             <div class="container">
                 <article>
                     <h3 class="title">LEADERSHIP</h3>
@@ -275,7 +281,7 @@
                 </article>
             </div>
         </div>
-        <div class="section nonslide">
+        <div class="section nonslide" data-anchor="sawards">
             <div class="container">
                 <article>
                     <h3 class="title">AWARDS &amp; ASSOCIATIONS</h3>
@@ -297,7 +303,7 @@
                 </article>
             </div>
         </div>
-        <div class="section nonslide">
+        <div class="section nonslide" data-anchor="scontact">
             <div class="container">
                 <article>
                     <h3 class="title">CONTACT US</h3>
@@ -463,16 +469,13 @@
                             <li class="well">Work at PDM</li>
                             <li class="well">Just Saying Hi</li>
                         </ul>
-
                         <h4>I Heard about PDM from:</h4>
-                        <input class="form-control ulinput" placeholder="I heard about PDM from"></li>
-
+                        <input class="form-control ulinput" placeholder="I heard about PDM from">
+                        </li>
                         <div>
                             <textarea class="form-control" rows="15" placeholder="Type your message here..."></textarea>
                             <button type="button" class="btn">Send</button>
-
                         </div>
-                        
                     </div>
                     <div class="col-md-1 col-xs-1 contact">
                         <h2 class="close-icon"><i class="fa fa-times" data-dismiss="modal"></i></h2>

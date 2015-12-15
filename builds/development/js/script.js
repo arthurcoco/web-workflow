@@ -189,7 +189,7 @@ $(document).ready(function() {
     });
 
 
-
+     $(".loader").fadeOut("slow");
     console.log("doc ready!");
 
 
