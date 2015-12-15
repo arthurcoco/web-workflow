@@ -24,7 +24,6 @@ var env,
 env = process.env.NODE_ENV || 'development';
 
 env = 'production';
-// env = 'development';
 
 if (env === 'development'){
 	outputDir = 'builds/development/';
