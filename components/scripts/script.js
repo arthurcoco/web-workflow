@@ -128,6 +128,32 @@
      })
 
 
+     var upAcc = 0;
+     var downAcc = 0;
+
+     $('body').on('mousewheel', function(e) {
+         if (e.originalEvent.wheelDelta > 0) {
+             upAcc = upAcc + 1;
+             downAcc = 0;
+
+             if (upAcc > 3) {
+                 console.log('up');
+
+                 console.log(upAcc);
+             }
+
+         } else {
+             upAcc = 0;
+             downAcc = downAcc + 1;
+             if (downAcc > 5) {
+
+                 console.log('down');
+                 console.log(downAcc);
+
+             }
+         }
+     });
+
 
 
  });
